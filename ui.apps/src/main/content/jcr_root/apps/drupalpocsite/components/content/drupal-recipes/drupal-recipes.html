@@ -1,0 +1,19 @@
+<h1>${properties.title}</h1><br/>
+Recipe category:${properties.category}<br/>
+Tags:${properties.tags}<br/>
+${properties.summary}<br/>
+<img src="${properties.image}"><br/>
+Preparation Time<br/>
+${properties.preparationTime}<br/>
+Coocking Time<br/>
+${properties.cookingTime}<br/>
+
+Servings
+${properties.noOfServings}<br/>
+Ingredients:<br/>
+<sly data-sly-list="${properties.ingredients}">
+${item}
+<br/>
+</sly>
+Instructions:<br/>
+${properties.instruction}
