@@ -118,7 +118,11 @@ public class RESTUtils {
 			articleNode
 					.setProperty("image", articlesDTO.getImage()[0].getUrl());
 
-			articleNode.setProperty("tags", tags);
+			if (tags.length > 1) {
+				articleNode.setProperty("tags", tags);
+			} else {
+				articleNode.setProperty("tags", tags[0]);
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
